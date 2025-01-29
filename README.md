@@ -8,14 +8,14 @@ Ruby bindings to the Storj C library (libuplink/uplink-c).
 * Clone [uplink-c](https://github.com/storj/uplink-c) repository.
 * Check out the release version `v1.9.0`.
     ```bash
-    $ git fetch --tags
-    $ git checkout tags/v1.9.0
+    git fetch --tags
+    git checkout tags/v1.9.0
     ```
 * Run `make build` to build the uplink-c library.
 * The `libuplink.so` file should be created in the `.build` folder.
 * Add the `libuplink.so` location path into `LD_LIBRARY_PATH` environment variable.
     ```bash
-    $ export LD_LIBRARY_PATH=<libuplink.so_folder_path>:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=<libuplink.so_folder_path>:$LD_LIBRARY_PATH
     ```
 
 ### Installation
@@ -34,27 +34,27 @@ Make sure the major & minor version of the gem or git tag matches the uplink-c r
 * In the Storj Dashboard, create an Access Grant key, and set the Access Grant key to `UPLINK_0_ACCESS` environment variable.
 
     ```bash
-    $ export UPLINK_0_ACCESS="15W8fjomdWMwh4cdbZx5YmDQpQsc8EN..."
+    export UPLINK_0_ACCESS="15W8fjomdWMwh4cdbZx5YmDQpQsc8EN..."
     ```
 * Create a Storj CLI Access key, which consists of Satellite Address and API key, and set them to `UPLINK_0_SATELLITE_ADDR` and `UPLINK_0_APIKEY` environment variables.
     ```bash
-    $ export UPLINK_0_SATELLITE_ADDR="125WTSDqyNZVcEU95Tbdf..."
-    $ export UPLINK_0_APIKEY="11MKmbWfdCCVzgCso5reTK..."
+    export UPLINK_0_SATELLITE_ADDR="125WTSDqyNZVcEU95Tbdf..."
+    export UPLINK_0_APIKEY="11MKmbWfdCCVzgCso5reTK..."
     ```
 * Create a passphrase and set it to `UPLINK_0_PASSPHRASE` environment variable.
     ```bash
-    $ export UPLINK_0_PASSPHRASE="mypassphrase"
+    export UPLINK_0_PASSPHRASE="mypassphrase"
     ```
 
 * Install gem dependencies.
 
   ```bash
-  $ bundle install
+  bundle install
   ```
 
 * Run the tests.
   ```bash
-  $ rspec
+  rspec
   ```
 
 ## <b> Usage </b>
