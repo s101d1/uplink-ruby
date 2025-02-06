@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.summary = "libuplink bindings for ruby"
   s.description = "Ruby bindings to the Storj C library"
   s.authors = ["Your Data Inc"]
-  s.homepage = "https://github.com/storj-thirdparty/uplink-ruby"
+  s.homepage = "https://github.com/s101d1/uplink-ruby"
   s.license = "MIT"
   s.files = Dir["lib/**/*.rb"]
   s.required_ruby_version = ">= 2.6.0"
