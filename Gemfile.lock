@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    uplink-ruby (1.9.0)
+    uplink-ruby (1.10.0)
       ffi (~> 1.15.0)
 
 GEM
