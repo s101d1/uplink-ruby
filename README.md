@@ -1,19 +1,26 @@
 # <b>Uplink-Ruby</b>
 
-Ruby bindings to the Storj C library (libuplink/uplink-c).
+Ruby bindings for libuplink.
 
 ## <b> Getting Started </b>
 
 ### Prerequisites
+
 * Clone [uplink-c](https://github.com/storj/uplink-c) repository.
-* Check out the release version `v1.9.0`.
+
+* Check out the release version that matches the gem's version.
+
     ```bash
     git fetch --tags
-    git checkout tags/v1.9.0
+    git checkout tags/v1.10.0
     ```
+
 * Run `make build` to build the uplink-c library.
+
 * The `libuplink.so` file should be created in the `.build` folder.
-* Add the `libuplink.so` location path into `LD_LIBRARY_PATH` environment variable.
+
+* Add the `libuplink.so` path to the `LD_LIBRARY_PATH` environment variable.
+
     ```bash
     export LD_LIBRARY_PATH=<libuplink.so_folder_path>:$LD_LIBRARY_PATH
     ```
@@ -23,25 +30,33 @@ Ruby bindings to the Storj C library (libuplink/uplink-c).
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'uplink-ruby', git: 'https://github.com/s101d1/uplink-ruby', tag: 'v1.9.0'
+gem 'uplink-ruby', git: 'https://github.com/s101d1/uplink-ruby', tag: 'v1.10.0'
 ```
 
-Make sure the major & minor version of the gem or git tag matches the uplink-c release version.
+Make sure the major and minor versions of the gem or git tag match the uplink-c release version.
 
 
 ### Running the Tests
+
 * Create a [Storj](https://www.storj.io/) account.
-* In the Storj Dashboard, create an Access Grant key, and set the Access Grant key to `UPLINK_0_ACCESS` environment variable.
+
+* In the Storj Dashboard, create a Project with manual encryption (using automatic encryption won't give you an option to create API key).
+
+* Create an Access Grant key with Full Access configuration, and set the Access Grant key to `UPLINK_0_ACCESS` environment variable.
 
     ```bash
     export UPLINK_0_ACCESS="15W8fjomdWMwh4cdbZx5YmDQpQsc8EN..."
     ```
-* Create a Storj CLI Access key, which consists of Satellite Address and API key, and set them to `UPLINK_0_SATELLITE_ADDR` and `UPLINK_0_APIKEY` environment variables.
+
+* Create an API key with Full Access configuration, which consists of Satellite Address and API key itself, and set them to `UPLINK_0_SATELLITE_ADDR` and `UPLINK_0_APIKEY` environment variables.
+
     ```bash
     export UPLINK_0_SATELLITE_ADDR="125WTSDqyNZVcEU95Tbdf..."
     export UPLINK_0_APIKEY="11MKmbWfdCCVzgCso5reTK..."
     ```
+
 * Create a passphrase and set it to `UPLINK_0_PASSPHRASE` environment variable.
+
     ```bash
     export UPLINK_0_PASSPHRASE="mypassphrase"
     ```
@@ -53,6 +68,7 @@ Make sure the major & minor version of the gem or git tag matches the uplink-c r
   ```
 
 * Run the tests.
+
   ```bash
   rspec
   ```
