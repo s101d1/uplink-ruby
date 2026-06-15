@@ -42,6 +42,12 @@ Make sure the major and minor versions of the gem or git tag match the uplink-c 
 
 * In the Storj Dashboard, create a Project with manual encryption (using automatic encryption won't give you an option to create API key).
 
+* Create a passphrase and set it to `UPLINK_0_PASSPHRASE` environment variable.
+
+    ```bash
+    export UPLINK_0_PASSPHRASE="mypassphrase"
+    ```
+
 * Create an Access Grant key with Full Access configuration, and set the Access Grant key to `UPLINK_0_ACCESS` environment variable.
 
     ```bash
@@ -53,12 +59,6 @@ Make sure the major and minor versions of the gem or git tag match the uplink-c 
     ```bash
     export UPLINK_0_SATELLITE_ADDR="125WTSDqyNZVcEU95Tbdf..."
     export UPLINK_0_APIKEY="11MKmbWfdCCVzgCso5reTK..."
-    ```
-
-* Create a passphrase and set it to `UPLINK_0_PASSPHRASE` environment variable.
-
-    ```bash
-    export UPLINK_0_PASSPHRASE="mypassphrase"
     ```
 
 * Install gem dependencies.
