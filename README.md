@@ -12,7 +12,7 @@ Ruby bindings for libuplink.
 
     ```bash
     git fetch --tags
-    git checkout tags/v1.10.1
+    git checkout tags/v1.14.0
     ```
 
 * Run `make build` to build the uplink-c library.
@@ -30,7 +30,7 @@ Ruby bindings for libuplink.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'uplink-ruby', git: 'https://github.com/s101d1/uplink-ruby', tag: 'v1.10.1'
+gem 'uplink-ruby', git: 'https://github.com/s101d1/uplink-ruby', tag: 'v1.14.0'
 ```
 
 Make sure the major and minor versions of the gem or git tag match the uplink-c release version.
